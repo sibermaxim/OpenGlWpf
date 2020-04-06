@@ -1,0 +1,36 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wpf="clr-namespace:SharpGL.WPF;assembly=SharpGL.WPF" x:Class="OpenGlWpf1.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="480" Width="640">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0">
+            <MenuItem Header="Файл"/>
+            <MenuItem Header="Редактировать">
+                <MenuItem Header="Эскиз">
+                    <MenuItem Header="Линия"/>
+                    <MenuItem Header="Прямоугольник"/>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width ="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <wpf:OpenGLControl Grid.Column="1" OpenGLDraw="OpenGLControl_OnOpenGLDraw"
+                               OpenGLInitialized="OpenGlControl_OpenGlInitialized">
+
+            </wpf:OpenGLControl>
+        </Grid>
+
+    </Grid>
+</Window>
