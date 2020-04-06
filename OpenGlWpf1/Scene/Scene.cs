@@ -1,4 +1,5 @@
-﻿using SharpGL.Shaders;
+﻿using SharpGL;
+using SharpGL.Shaders;
 
 namespace OpenGlWpf1.Scene
 {
@@ -6,6 +7,9 @@ namespace OpenGlWpf1.Scene
     {
         private ShaderProgram _shaderPixel;
 
-        public void Initialize
+        public void Initialize(OpenGL gl)
+        {
+
+        }
     }
 }
